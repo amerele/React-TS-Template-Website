@@ -1,0 +1,52 @@
+.index-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding: 30px 50px;
+}
+.img, .text{
+    width: 48%;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img img{
+    border: 1px solid #00000020;
+}
+.img svg{
+   position: relative;
+   top: 8px;
+   left: 10px;
+}
+.img span{
+    font-size: 36pt;
+    width: 100%;
+}
+.img p{
+    text-align: center;
+    margin-top: 4px;
+}
+.text p{
+    font-size: 22pt;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.text ul li{
+    list-style: none;
+    font-size: 16pt;
+    padding: 4px 0;
+    letter-spacing: 1px;
+}
+.text li:before {
+    content:"✔";
+    font-size:18px;
+    vertical-align:middle;
+}
+#dark .img, #dark .text{
+   color: var(--dark-font-color)
+}

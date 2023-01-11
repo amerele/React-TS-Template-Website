@@ -1,0 +1,161 @@
+.app-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 24px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 11px 35px 2px #00000014;
+    z-index: 2;
+}
+.header-title{
+    letter-spacing: 4px;
+    font-size: 14pt;
+}
+.nav{
+    position: absolute;
+    top: 18px;
+    left: 35%
+}
+.nav a{
+    margin: 0 15px;
+    font-size: 12px;
+}
+
+#dark .app-header{
+    box-shadow: 0px 11px 35px 2px #00000090;
+}
+.app-header-left, .app-header-right{
+    display: flex;
+    align-items: center
+}
+.name-user{
+    border: 1px solid black;
+    padding: 8px 16px;
+    cursor: pointer;
+    background: var(--light-bg-color);
+    margin-left: 22px;
+}
+a{
+    background: none;
+    border: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+    color: var(--light-font-color);
+}
+#dark a, #dark .header-title, #dark .sidebar, #dark .name-user, #dark .deslogar span{
+    color: var(--dark-font-color);
+}
+#dark .sidebar, #dark .name-user  {
+    background-color: var(--dark-login-color);
+}
+#dark .name-user{
+    border: 1px solid var(--dark-font-color);
+}
+
+a:hover{
+    border-bottom-color: #000;
+}
+ul li {
+    padding: 5px 10px;
+}
+#dark a:hover{
+    border-bottom-color: var(--dark-font-color);
+}
+.user, .user span{
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+
+
+.menu-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 10px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin-right: 8px;
+    margin-left: 11px;
+    
+}
+.menu-btn__burguer{
+    width: 20px;
+    height: 1.5px;
+    background: #000;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    
+}
+#dark .menu-btn__burguer, #dark .menu-btn__burguer::after, 
+#dark .menu-btn__burguer::before{
+    background: white;
+}
+.menu-btn__burguer::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 1.5px;
+    background: #000;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    transform: translateY(-6px);
+}
+.menu-btn__burguer::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 1.5px;
+    background: #000;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    transform: translateY(6px);
+}
+.menu-btn.ativo .menu-btn__burguer, #dark .menu-btn.ativo .menu-btn__burguer {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+.menu-btn.ativo .menu-btn__burguer::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.ativo .menu-btn__burguer::after {
+   transform: rotate(-45deg) translate(35px, 35px);
+} 
+
+.sidebar{
+    position: fixed;
+    width: 20%;
+    display: flex;
+    height: 100%;
+    background: var(--light-bg-color);
+    overflow: hidden;
+    top: 78px;
+    left: -100%;
+    transition: .5s;
+    box-shadow: 0px 11px 35px 2px #00000014;
+}
+.sidebar li a{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 0;
+}
+.sidebar i {
+    padding: 0 2px;
+}
+
+.sidebar li a:hover{
+    border-color: transparent;
+    transform: scale(1.1);
+}
+.ativo{
+    left: 0;
+}
